@@ -21,7 +21,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
-# edit .env and add TELEGRAM_BOT_TOKEN
+# edit .env and add TELEGRAM_BOT_TOKEN (never commit real tokens)
 python -m bot.main
 ```
 
@@ -30,9 +30,10 @@ python -m bot.main
 - `TELEGRAM_BOT_TOKEN` – Telegram bot token
 - `DERIV_APP_ID` – Deriv app id (optional for demo)
 
+> Never commit real bot tokens. Keep them in `.env` or environment variables.
+
 ## Next steps
 
 - Implement live Deriv data fetch + candle normalization.
 - Add real strategies/ML scoring.
 - Add persistence (signals history, user preferences).
-
